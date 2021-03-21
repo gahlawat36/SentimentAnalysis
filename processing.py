@@ -43,6 +43,8 @@ stopwords= {'br', 'the', 'i', 'me', 'my', 'myself', 'we', 'our', 'ours', 'oursel
 #perform all above data cleaning steps on text column
 
 def text_processing(sentance):
+    ''' This function takes in a sentence and apply all data cleaning steps'''
+
     preprocessed_reviews = []
     sentance = re.sub(r"http\S+", "", sentance)
     sentance = BeautifulSoup(sentance, 'lxml').get_text()
